@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --Red: hsl(0, 78%, 62%);
+      --Cyan: hsl(180, 62%, 55%);
+      --Orange: hsl(34, 97%, 64%);
+      --Blue: hsl(212, 86%, 64%);
+      --Very-Dark-Blue: hsl(234, 12%, 34%);
+      --Grayish-Blue: hsl(229, 6%, 66%);
+      --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+    body{
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9375rem;
+      display: flex;
+      flex-direction: column;
+      color: var(--Grayish-Blue);
+    }
+    .main-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1.25rem auto 0;
+      padding: 0 25px;
+    }
+    .maintext-container{
+      text-align: center;
+      margin-top: 3.75rem;
+    }
+    .first-title, .second-title{
+      font-weight: 200;
+      font-size:x-large;
+      margin: 0;
+      color: var(--Very-Dark-Blue);
+    }
+    .second-title{
+      font-weight: bold;
+    }
+    .content-text{
+      font-weight: 400;
+      font-size:0.9375rem;
+    }
+    .card-main-container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .card-container{
+      display: flex;
+      flex-direction: column;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px;
+      padding: 1.625rem;
+      font-size: small;
+      font-weight: 400;
+      border-radius: 8px;
+      margin: 1.5625rem 0 0;
+    }
+    .card-title{
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--Very-Dark-Blue);
+    }
+    .card-text{
+      margin: 0 0 2.5rem;
+    }
+    .card-img{
+      margin-left: auto;
+    }
+    .cyan{
+      border-top: 3.5px solid var(--Cyan);
+    }
+    .red{
+      border-top: 3.5px solid var(--Red);
+    }
+    .orange{
+      border-top: 3.5px solid var(--Orange);
+    }
+    .blue{
+      border-top: 3.5px solid var(--Blue);
+    }
+    .attribution{
+      text-align: center;
+    }
+    @media (min-width: 1440px){
+      .main-container{
+        margin: 0 auto 0;
+      }
+      .first-title, .second-title{
+        font-size: 2.1875rem;
+      }
+      .content-text{
+        max-width: 31.25rem;
+      }
+      .card-main-container{
+        display: grid;
+        grid-template-areas: 
+        ". area2 ."
+        "area1 area2 area3"
+        "area1 area2-2 area3"
+        ". area2-2 .";
+        justify-content: center;
+        grid-gap: 1.875rem;
+        margin-top: 3.125rem;
+      }
+      .card-container{
+        margin: 0;
+        width: 19.0625rem;
+        height: 11.4375rem;
+      }
+      .cyan{
+      grid-area: area1;
+      }
+      .red{
+        grid-area: area2;
+      }
+      .orange{
+        grid-area: area2-2;
+      }
+      .blue{
+        grid-area: area3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+  <div class="maintext-container">
+  <h1 class="first-title">Reliable, efficient delivery</h1>
+  <h2 class="second-title">Powered by Technology</h2>
+  <p class="content-text">Our Artificial Intelligence powered tools use millions of project data points 
+    to ensure that your project is successful</p>
+  </div>
+  <div class="card-main-container">
+    <div class="card-container cyan">
+      <h3 class="card-title">Supervisor</h3>
+      <p class="card-text">Monitors activity to identify project roadblocks</p>
+      <img src="/images/icon-supervisor.svg" alt="team builder" class="card-img">
+    </div>
+    <div class="card-container red">
+      <h3 class="card-title">Team Builder</h3>
+      <p class="card-text">Scans our talent network to create the optimal team for your project</p>
+      <img src="/images/icon-team-builder.svg" alt="team builder" class="card-img">
+    </div>
+    <div class="card-container orange">
+      <h3 class="card-title">Karma</h3>
+      <p class="card-text">Regularly evaluates our talent to ensure quality</p>
+      <img src="/images/icon-karma.svg" alt="team builder" class="card-img">
+    </div>
+    <div class="card-container blue">
+      <h3 class="card-title">Calculator</h3>
+      <p class="card-text">Uses data from past projects to provide better delivery estimates</p>
+      <img src="/images/icon-calculator.svg" alt="team builder" class="card-img">
+    </div> 
+  </div>  
+</div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by SantiagoCF
+    </p>
+  </footer>
+</body>
+</html>
