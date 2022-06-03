@@ -1,0 +1,133 @@
+:root {
+  --white: #fff;
+  --violet: hsl(257, 40%, 49%);
+  --font-body: 16px "Open Sans";
+  --font-headings: 24px "Poppins";
+}
+body {
+  margin: 0;
+  background-color: var(--violet);
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 23.4375rem auto;
+  font: var(--font-body);
+  color: var(--white);
+  padding: 40px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.main-header {
+  margin-bottom: 48px;
+}
+.main-header img {
+  width: 130px;
+  height: auto;
+}
+.promo-img img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.subtitle {
+  font: var(--font-headings);
+  font-weight: 700;
+  text-align: center;
+}
+.main-paragraph {
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+.primary-button {
+  margin-top: 30px;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  font: 12px "Poppins";
+  color: var(--violet);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px 2px;
+}
+.footer {
+  margin-bottom: 100px;
+}
+.footer ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 5px;
+}
+.fa-brands {
+  color: #fff;
+  font-size: 25px;
+}
+@media (min-width: 1000px) {
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-size: cover;
+  }
+  .main-header img {
+    width: max-content;
+  }
+  .container-content {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+  }
+  .promo-img img {
+    min-width: 600px;
+    width: 100%;
+    max-width: 800px;
+  }
+  .subtitle {
+    font: 50px "Poppins";
+    font-weight: 700;
+    text-align: left;
+  }
+  .main-paragraph {
+    font: 18px "Open Sans";
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+  }
+  .primary-button {
+    font: 14px "Poppins";
+    font-weight: 700;
+    height: 50px;
+  }
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .fa-brands {
+    font-size: 35px;
+  }
+}
