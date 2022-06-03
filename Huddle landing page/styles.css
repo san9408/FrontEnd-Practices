@@ -7,7 +7,7 @@
 body {
   margin: 0;
   background-color: var(--violet);
-  background-image: url(/images/bg-mobile.svg);
+  background-image: url(./images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: 23.4375rem auto;
   font: var(--font-body);
@@ -82,7 +82,7 @@ body {
 }
 @media (min-width: 1000px) {
   body {
-    background-image: url(/images/bg-desktop.svg);
+    background-image: url(./images/bg-desktop.svg);
     background-size: cover;
   }
   .main-header img {
